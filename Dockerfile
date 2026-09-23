@@ -9,5 +9,6 @@ COPY app.py .
 COPY model.pkl .
 COPY vectorizer.pkl .
 COPY templates ./templates
+COPY static ./static
 
 CMD ["sh", "-c", "gunicorn --bind 0.0.0.0:${PORT:-10000} app:app"]
